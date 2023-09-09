@@ -35,7 +35,7 @@ class TestCard(unittest.TestCase):
         self.assertEqual(self.card.__lt__(Card('Spades','Ace')), False)
 
     def test_hash(self):
-        self.assertEqual(self.card.__hash__(), hash(Card('Spades','Ace'))
+        self.assertEqual(self.card.__hash__(), hash(Card('Spades','Ace') ))
                          
 # Executing the tests in the above test case class  
 if __name__ == "__main__":
