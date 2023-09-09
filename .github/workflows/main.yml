@@ -10,4 +10,4 @@ jobs:
         with:
           node-version: '14'
       - run: npm install -g python3
-      - run: python3 /home/runner/work/TDD/TDD/poker/card/cardTests.py
+      - run: python3 /home/runner/work/TDD/TDD/tests.py
