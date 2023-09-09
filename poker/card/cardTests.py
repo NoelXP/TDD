@@ -13,7 +13,7 @@ class TestCard(unittest.TestCase):
 
 # setUp method is overridden from the parent class TestCase 
     def setUp(self):
-      self.card = Card()
+      self.card = Card('Spades','Ace')
 
 # Each test method starts with the keyword test_
     def test_getSuit(self):
@@ -35,4 +35,8 @@ class TestCard(unittest.TestCase):
         self.assertEqual(self.card.__lt__(Card('Spades','Ace')), False)
 
     def test_hash(self):
-        self.assertEqual(self.card.__hash__(), 0)
+        self.assertEqual(self.card.__hash__(), hash(Card('Spades','Ace'))
+                         
+# Executing the tests in the above test case class  
+if __name__ == "__main__":
+    unittest.main()
