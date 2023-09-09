@@ -1,7 +1,13 @@
-- name: First interaction
-  uses: actions/first-interaction@v1.1.1
-  with:
-    repo-token: ${{ secrets.GITHUB_TOKEN }}
-    issue-message: '# Message with markdown.\nThis is the message that will be displayed on users' first issue.'
-    pr-message: 'Message that will be displayed on users' first pr. Look, a `code block` for markdown.'
-
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
+jobs:
+  check-bats-version:
+  runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g python3
+      - run: python3 TDD/poker/card/cardTests.py
